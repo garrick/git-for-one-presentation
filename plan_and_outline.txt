@@ -1,0 +1,32 @@
+Find presentation fraemwork.  In Javascript/HTML5.
+
+Slides - What is Git?
+          - History
+          - Advantages
+          - Disadvantages
+      Why bother to use it?
+          - For solo work
+          - Multi-developer projects
+      Basic Download/Install suggestions
+        - Linux 
+        - Mac
+        - Windows
+      With Git power comes Git responsibility
+        - Get mechanics
+          - Four object types
+          - All of repository is visible
+          - We'll see some of what this means
+      Show git init creating your own repository 
+      Tell git to ignore certian files if you like
+      Create HelloWorld web page - Git doesn't know anything about it
+      Use 'git add hello.html' to add it to the index so Git knows to track
+      Use 'git commit -m "Initial commit"' to commit the change
+
+      
+
+Speaker notes:
+      Use Media to print?  JavasScript to render notes separately?
+      - Do HelloWorld in Ruby
+      - include exact command syntax (so you don't mess up)
+
+
