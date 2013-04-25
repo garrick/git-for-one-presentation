@@ -1,4 +1,4 @@
-Find presentation fraemwork.  In Javascript/HTML5.
+X Find presentation fraemwork.  In Javascript/HTML5.
 
 Slides - What is Git?
           - History
@@ -16,11 +16,27 @@ Slides - What is Git?
           - Four object types
           - All of repository is visible
           - We'll see some of what this means
-      Show git init creating your own repository 
+      Show git init creating your own repository
+        - git init .
+        - git status
       Tell git to ignore certian files if you like
+        - gvim .gitignore
+        - git add .gitignore
+        - git status
+        - git commit -m "Adding .gitignore"
       Create HelloWorld web page - Git doesn't know anything about it
       Use 'git add hello.html' to add it to the index so Git knows to track
       Use 'git commit -m "Initial commit"' to commit the change
+      Let's do some more work...
+        - Add an image in a sub directory
+        - git status
+        - git add directory & image
+        - modify hello.html to us image
+      Basic workflow for local solo projects:
+        - modify files
+        - ADD files to the index
+        - COMMIT changes to your repository
+
 
       
 
