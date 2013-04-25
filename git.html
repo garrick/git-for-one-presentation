@@ -1,0 +1,528 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/git-logo-small.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>What is Git?</h2>
+    </hgroup>
+    <article>
+      <p>Git is:</p>
+      <ul class="build">
+        <li>"A distributed revision control system" and...</li>
+        <li>"A source code management system (SCM)" (if you believe Wikipedia)</li>
+        <li>Self described in the man page as...</li>
+        <li><code>git - the stupid content tracker</code></li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>The history of Git</h2>
+    </hgroup>
+    <article>
+      <p>How Git got started:</p>
+      <ul class="build">
+        <li>Began when Linus Torvalds &amp; other Linux kernel contributors got fed up with political issues around using non-open source software (called BitKeeper) to maintain the Linux kernel.</li>
+        <li>Linus &amp; company decided they were better at solving technical problems than political ones.</li>
+        <li>From the start in early 2005 through late 2005 with the 1.0 release, Git went from prototype to meeting it's three primary goals inspired by BitKeeper and Monotone which were:
+        </li>
+      </ul>
+        <ul class="build" style="padding-left:40px;">
+          <li>Take CVS as an example of what not to do; if in doubt, make the exact opposite decision.</li>
+          <li>Support a distributed, BitKeeper-like workflow.</li>
+          <li>Very strong safeguards against corruption, either accidental or malicious.</li>
+        </ul>
+    </article>
+  </slide>
+  
+  <slide>
+    <hgroup>
+      <h2>Advantages of Git</h2>
+    </hgroup>
+    <article>
+      <p>Git is good for:</p>
+      <ul class="build">
+        <li>Tracking source control changes from multiple contributors</li>
+        <li>Dealing with multiple branches of source code</li>
+        <li>Supporting software development without a centeralized server (e.g. like Subversion)</li>
+      </ul>
+    </article>
+  </slide>
+
+
+
+  <slide>
+    <hgroup>
+      <h2>Disadvantages of Git</h2>
+    </hgroup>
+    <article>
+      <p>Git has it's downfalls.  Such as:</p>
+      <ul class="build">
+        <li>Git is <b><i>not</i></b> very user friendly</li>
+        <li>There are some GUI tools, but they are in practice a secondary enhancement to the command line utilities</li>
+        <li>Git's promiscuous branching model can discourage true continuous integration</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Why bother to use Git?</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>It's pretty simple for individual projects</li>
+        <li>It requires no maintined server</li>
+        <li>You can also use it to "deploy" on $5/month hosting accounts</li>
+        <li>Resumé fodder: Dice.com shows almost the same number of postings for Git as Subversion</li>
+        <li>Think Different: because Git is different from Subversion, it gives you a different perspective on the nature of maintaining &amp; sharing source code</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Basic Download/Install Suggestions</h2>
+    </hgroup>
+    <article>
+      <p>Check out <a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a></p>
+      <ul class="build">
+        <li>Linux: may already be installed, or just use the appropriate package management tool as indicated on the main Git download page for Linux: <a href="http://git-scm.com/download/linux">http://git-scm.com/download/linux</a></li>
+        <li>Mac: follow the download link, or use your favorite open source package manager (e.g. homebrew)
+        <li>Windows: install Linux or get a Mac;)</li>
+        <li>Windows: seriously though Windows users - There's a client download at the link above, but I've mostly used the one on <a href="http://msysgit.github.io/">http://msysgit.github.io/</a> </li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>With Git power comes Git responsibility...</h2>
+    </hgroup>
+    <article>
+      <p>You'll learn just enough to be dangerous today</p>
+      <ul class="build">
+        <li>Practice with a few projects - make copies of files to other "back-up" directories like you already do until you're comfortable</li>
+        <li>If you want to understand Git, I highly recommend the free <a href="gitguys.com">gitguys.com</a> tutorial.  Read each section and follow along with thier examples one line at a time (easier to do on Mac &amp; Linux).</li>
+      </ul>
+    </article>
+  </slide>
+  
+  
+  <slide>
+    <hgroup>
+      <h2>Less talk, dude. More code.</h2>
+    </hgroup>
+    <article>
+      <p>I've already installed Git &amp; I'll be demoing live on the command line.  We'll start with creating a project directory and initializing a Git repository.</p>
+      <pre class="prettyprint" data-lang="bash">
+        mkdir hello_world
+        cd hello_world
+        git init .
+      </pre>
+<p>Git responds telling us the command was successful:</p>
+      <pre>
+        Initialized empty Git repository in /home/badlogin/hello_world/.git/
+      </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>What's going on here?</h2>
+    </hgroup>
+    <article>
+<p>One of the most common Git commands is to ask what's going on with 'status' like so:</p>
+<pre class="prettyprint" data-lang="bash">
+git status </pre>
+<p><code>git status</code> says nothings going on:</p>
+<pre>
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track) </pre>
+      <p>This is a command you'll use frequently to understand the state of your workspace.</p>
+    </article>
+  </slide>
+ 
+
+  <slide>
+    <hgroup>
+      <h2>Let's do some project set-up</h2>
+    </hgroup>
+    <article>
+<p>Remember - Git tracks content, really.  Not "source files" or "directories" or whatever.  So let's give it some content to track.  Like a .gitignore file:</p>
+<pre class="prettyprint" data-lang="bash">
+gvim .gitignore
+git status </pre>
+<p><code>git status</code> indicates an untracked file:</p>
+<pre>
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gitignore
+nothing added to commit but untracked files present (use "git add" to track) </pre>
+    </article>
+  </slide>
+ 
+  <slide>
+    <hgroup>
+      <h2>We need to tell Git what to track</h2>
+    </hgroup>
+    <article>
+<p>Git has seen a content change, but doesn't track that object.  So we have to tell it to explicitly.</p>
+<pre class="prettyprint" data-lang="bash">
+git add .gitignore
+git status </pre>
+<p><code>git status</code> indicates we have changes in the index:</p>
+<pre># On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   .gitignore
+# </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Now, let's actually commit to the repo</h2>
+    </hgroup>
+    <article>
+<p>We've told Git to add our .gitignore changes to the index, but we haven't told git to store the change as a revision.  That's kind of the whole point of this, so let's do that.</p>
+<pre class="prettyprint" data-lang="bash">
+git commit -m "Initial commit."</pre>
+<p>Now we see the kind of command where Git says something without us having to ask for status.</p>
+<pre>
+[master (root-commit) 4c86a32] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore </pre>
+ <p></p>
+    </article>
+  </slide>
+ 
+  <slide>
+    <hgroup>
+      <h2>And just where are we now?</h2>
+    </hgroup>
+    <article>
+<p>Ok.  That did something, as you might expect we'll ask Git the status of our workspace.  Just to be sure.</p>
+<pre class="prettyprint" data-lang="bash">
+git status</pre>
+<p>And all is quiet.</p>
+<pre>
+# On branch master
+nothing to commit, working directory clean </pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Let's make a change to an existing file</h2>
+    </hgroup>
+    <article>
+<p>Now that the file is tracked by Git, let's make a change to it's content then check our workspace status.
+</p>
+<pre class="prettyprint" data-lang="bash">
+gvim .gitignore
+git status</pre>
+<p>Yep.  Git knows about .gitignore now
+</p>
+<pre>
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   .gitignore
+#
+no changes added to commit (use "git add" and/or "git commit -a") </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>We can see our differences between workspace and index</h2>
+    </hgroup>
+    <article>
+<p>Git has powerfull change 'diffing' built in.
+</p>
+<pre class="prettyprint" data-lang="bash">
+git diff .gitignore</pre>
+<p>You'll eventually become comfortable with diff ouput format as shown below. To learn more, Google is your friend.  
+</p>
+<pre>
+diff --git a/.gitignore b/.gitignore
+index b25c15b..76b2cbc 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,2 @@
+ *~
++*.swap </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>So we add our new change to the index</h2>
+    </hgroup>
+    <article>
+<p>This is just like the earlier 'add'.  We're adding a <b>change</b>, not a file!
+</p>
+<pre class="prettyprint" data-lang="bash">
+git add .gitignore
+git status
+</pre>
+<p>Now, our change is in the index and ready to be committed.
+</p>
+<pre>
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   .gitignore
+# </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>And finally, we commit our change</h2>
+    </hgroup>
+    <article>
+<p>Git 
+</p>
+<pre class="prettyprint" data-lang="bash">
+git commit -m "Telling Git to ignore Vim swap files"
+</pre>
+<p>Again, we get the confirmation that we made a change to the repo.
+</p>
+<pre>
+[master b46572c] Telling Git to ignore Vim swap files
+ 1 file changed, 1 insertion(+) </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>You can view your commit logs</h2>
+    </hgroup>
+    <article>
+<p>Over time on a project, checking log history can be useful.
+</p>
+<pre class="prettyprint" data-lang="bash">
+git log
+</pre>
+<p>From this, you can diff on specific commits (hint: you only need the first 6 characters of each commit.  Not the whole SHA1!)
+</p>
+<pre>
+commit b46572c48797726b74f9092588303f1ccc3fddc9
+Author: Garrick West <garrick@acm.org>
+Date:   Mon Apr 22 23:03:41 2013 -0700
+
+    Telling Git to ignore Vim swap files
+
+commit 4c86a328cb5c2696ad35573404274249d4a76556
+Author: Garrick West <garrick@acm.org>
+Date:   Mon Apr 22 22:32:48 2013 -0700
+
+    Initial commit </pre>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Git solo project workflow</h2>
+    </hgroup>
+    <article>
+<pre class="prettyprint" data-lang="bash">
+mkdir some_project        #Step1 - create a workspace directory
+cd some_project           #Step2 - get ready to issue Git commands there
+git init .                #Step3 - initialize workspace to hold a .git repo
+gvim somefile.txt         #Step4 - Start working
+git add somefile.txt      #Step5 - Add your project changes to the index
+git commit -m "I coded"   #Step6 - Commit at regular intervals
+</pre>
+<p> This is hepful even for small pieces of work.
+</p>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Git EZ Archiving</h2>
+    </hgroup>
+    <article>
+<pre class="prettyprint" data-lang="bash">
+git archive --format zip --output /full/path/to/zipfile.zip master </pre>
+<p> Your Git project will have a .git directory.  If you want to make a copy of the current revision of your repo without including your full revision history, the <code>git archive</code> command is quite handy.  The above command works for the default 'master' branch.  See the man page for a world of options.
+</p>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Accessing open source projects via Git</h2>
+    </hgroup>
+    <article>
+    <p><code>git clone</code> is the simplest way to access a Git project.
+<pre class="prettyprint" data-lang="bash">
+git clone https://github.com/michalbe/Simple-game-with-HTML5-Canvas.git </pre>
+<p>Most open source projects will have a read-only Git URL.  The <code>git clone</code> command let's you copy all of the repository content onto your own system. 
+</p>
+    </article>
+  </slide>
+
+
+  <slide>
+    <hgroup>
+      <h2>Keeping up with open source projects via Git</h2>
+    </hgroup>
+    <article>
+    <p><code>git pull</code> will bring down the latest content.</p>
+<pre class="prettyprint" data-lang="bash">
+git pull</pre>
+<p>Note:  if you've made conflicting local changes, this may not work easily.  This is where more hands on work with Git will pay off.  Or, you can just blow away the directory and pull down a new copy...
+</p>
+    </article>
+  </slide>
+ 
+
+  <slide>
+    <hgroup>
+      <h2>Setting up a remote SSH repo for Backup &amp; Deploy</h2>
+    </hgroup>
+    <article>
+    <p>On your remote system:</p>
+<pre class="prettyprint" data-lang="bash">
+ssh your_user@yourdomain.com
+mkdir hello_world.git
+cd hello_world.git/
+git init --bare
+exit </pre>
+<p>Now, in your local Git repo do:
+</p>
+<pre class="prettyprint" data-lang="bash">
+git remote add origin your_user@yourdomain.com:/home/your_user/wherever/hello_world.git
+git push origin master</pre>
+<p>This is now your remote origin of your repo, the authority of your project.  With this set up, you can now easily clone and deploy your project.
+</p>
+    </article>
+  </slide>
+ 
+
+  <slide>
+    <hgroup>
+      <h2>Simple deploy on the big bad intertubes</h2>
+    </hgroup>
+    <article>
+    <p>On your remote system:</p>
+<pre class="prettyprint" data-lang="bash">
+ssh your_user@yourdomain.com
+cd public_html #or wherever you deploy to
+git clone ../GitRepos/hello_world.git 
+</pre>
+<p>Be warned, witout some .htaccess restrictions, the contents of your .git repo are accessible as well!  When you need to update, check in and push your changes, then simply pull in the server side clone:</p>
+<pre class="prettyprint" data-lang="bash">
+ssh your_user@yourdomain.com
+cd public_html/hello_world 
+git pull --rebase
+</pre>
+    </article>
+  </slide>
+
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/git-logo-small.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+      <p>Slide system adapted from Google IO-2012 HTML5 Slide template</p>
+      <p></p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/git-logo-small.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
