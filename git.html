@@ -95,7 +95,7 @@ URL: https://code.google.com/p/io-2012-slides
       <p>Git has it's downfalls.  Such as:</p>
       <ul class="build">
         <li>Git is <b><i>not</i></b> very user friendly</li>
-        <li>There are some GUI tools, but they are in practice a secondary enhancement to the command line utilities</li>
+        <li>There are some GUI tools, but they are best used as a visual enhancement to the command line utilities</li>
         <li>Git's promiscuous branching model can discourage true continuous integration</li>
       </ul>
     </article>
@@ -140,7 +140,10 @@ URL: https://code.google.com/p/io-2012-slides
       <p>You'll learn just enough to be dangerous today</p>
       <ul class="build">
         <li>Practice with a few projects - make copies of files to other "back-up" directories like you already do until you're comfortable</li>
-        <li>If you want to understand Git, I highly recommend the free <a href="gitguys.com">gitguys.com</a> tutorial.  Read each section and follow along with thier examples one line at a time (easier to do on Mac &amp; Linux).</li>
+        <li>If you want to understand Git, I highly recommend the free <a href="gitguys.com">gitguys.com</a> tutorial.  Read each section and follow along with thier examples one line at a time. </li>  
+        <li>
+        But until then, to quote one of my favorite SciFi characters...
+        <a href="http://www.youtube.com/embed/GvozGpMu_p8"> "Shiny.  Let's be bad guys." -Jayne Cobb </a></li>
       </ul>
     </article>
   </slide>
@@ -306,7 +309,7 @@ index b25c15b..76b2cbc 100644
 +++ b/.gitignore
 @@ -1 +1,2 @@
  *~
-+*.swap </pre>
++*.swp</pre>
     </article>
   </slide>
 
@@ -457,7 +460,7 @@ exit </pre>
 <p>Now, in your local Git repo do:
 </p>
 <pre class="prettyprint" data-lang="bash">
-git remote add origin your_user@yourdomain.com:/home/your_user/wherever/hello_world.git
+git remote add origin your_user@yourdomain.com:/home/your_user/hello_world.git
 git push origin master</pre>
 <p>This is now your remote origin of your repo, the authority of your project.  With this set up, you can now easily clone and deploy your project.
 </p>
@@ -474,9 +477,9 @@ git push origin master</pre>
 <pre class="prettyprint" data-lang="bash">
 ssh your_user@yourdomain.com
 cd public_html #or wherever you deploy to
-git clone ../GitRepos/hello_world.git 
+git clone ~/hello_world.git 
 </pre>
-<p>Be warned, witout some .htaccess restrictions, the contents of your .git repo are accessible as well!  When you need to update, check in and push your changes, then simply pull in the server side clone:</p>
+<p>Be warned, witout some .htaccess restrictions, the contents of your .git repo are accessible as well!  When you want to update your deployment after you've pushed into your origin repo, log into your hosting account and simply do a git pull in your server side clone:</p>
 <pre class="prettyprint" data-lang="bash">
 ssh your_user@yourdomain.com
 cd public_html/hello_world 
@@ -485,13 +488,17 @@ git pull --rebase
     </article>
   </slide>
 
-
   <slide class="thank-you-slide segue nobackground">
     <aside class="gdbar right"><img src="images/git-logo-small.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>&lt;Thank You!&gt;</h2>
-      <p>Slide system adapted from Google IO-2012 HTML5 Slide template</p>
-      <p></p>
+      </p>
+      </p>
+      <p>Slide system adapted from Google IO-2012 HTML5 Slide template
+      </br>
+      </br>This presentation on GitHub at:
+      <center>https://github.com/garrick/git-for-one-presentation</center>
+      </p>
     </article>
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
